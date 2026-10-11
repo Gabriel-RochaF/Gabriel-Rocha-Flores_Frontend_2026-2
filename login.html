@@ -3,8 +3,30 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Login</title>
+        <style>
+            @import url(Stylesheet.css);
+        </style>
     </head>
     <body>
-        
+        <header>
+            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="Logo"></a>
+            <h1>Super Show Supermercados</h1>
+        </header>
+        <main>
+            <section id="cadastro">
+                
+                <form action="index.html">
+                    <a href="cadastro.html" id="cadastro-link">Cadastre-se &#8594</a>
+                    <h2>Entrar</h2>
+                    <label for="emailCadastro">E-mail: </label><br>
+                    <input type="email" name="email" id="emailCadastro" placeholder="email@exemplo.com" required><br>
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" name="senha" id="senha" minlength="8" required><br>
+                    <div id="cadastrar">
+                        <input type="submit" name="login" value="Entrar" id="botao-login">
+                    </div>
+                </form>
+            </section>
+        </main>
     </body>
 </html>
