@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Loja</title>
         <style>
             @import url(css/Stylesheet.css);
@@ -9,13 +10,13 @@
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
+            <a href="index.html"><img src="imagens/variados/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
             <h1>Super Show Supermercados</h1>
             <nav class="links">
                 <a href="cadastro.html" >Cadastrar</a>
                 <a href="login.html" >Entrar</a>
                 <a href="perfil.html" ><img src="imagens/icones/perfil-de-usuario.png" alt="perfil"></a>
-                <a href="loja.html" aria-current="page"><img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></a>
+                <a href="loja.html" aria-current="page"><img src="imagens/icones/carrinhoDeCompras.png" alt="carrinho de compras"></a>
                 <a href="relatorios.html" ><img src="imagens/icones/tabela.png" alt="tabela relatorios"></a>
             </nav>
         </header>
@@ -33,7 +34,7 @@
                 <button id="ok">ok</button>
             </section>
             <section id="carrinho">
-                <h2>Carrinho <img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></h2>
+                <h2>Carrinho <img src="imagens/icones/carrinhodecompras.png" alt="carrinho de compras"></h2>
                 <h3 id="total">Total: R$59,44 </h3>                
                 <button id="confirmar-compra">Finalizar Compra</button>
                 <div id="produtos-carrinho">
@@ -66,32 +67,24 @@
             </section>
             <section id="filtros">
                 <form>
-                    <label for="pesquisar"><img src="imagens/icones/lupa.png" alt="lupa pesquisar" id="lupa"><input type="search" name="pesquisar" id="pesquisar"></label> <br>
-                </form>                     
-                <h2>Filtros</h2>
-                <label for="mercearia"><input type="checkbox" name="mercearia" id="mercearia"> Mercearia</label> <br> 
-                <label for="acougue"><input type="checkbox" name="acougue" id="acougue"> Açougue</label> <br> 
-                <label for="laticinios-e-frios"><input type="checkbox" name="laticinios-e-frios" id="laticinios-e-frios"> Laticínios e Frios</label> <br> 
-                <label for="hortifruti"><input type="checkbox" name="hortifruti" id="hortifruti"> Hortifruti</label> <br> 
-                <label for="limpeza-e-higiene"><input type="checkbox" name="Limpeza-e-higiene" id="limpeza-e-higiene"> Limpeza e Higiene</label> <br> 
-                <label for="Faixa-ate-10"><input type="checkbox" name="Faixa-ate-10" id="Faixa-ate-10"> até R$10,00</label> <br> 
-                <label for="Faixa-de-10-a-25"><input type="checkbox" name="Faixa-de-10-a-25" id="Faixa-de-10-a-25"> de R$10,00 a R$25,00</label> <br> 
-                <label for="Faixa-de-25-a-50"><input type="checkbox" name="Faixa-de-25-a-50" id="Faixa-de-25-a-50"> de R$25,00 a R$50,00</label> <br> 
-                <label for="Faixa-de-50-a-100"><input type="checkbox" name="Faixa-de-50-a-100" id="Faixa-de-50-a-100"> de R$50,00 a R$100,00</label> <br> 
-                <label for="Faixa-mais-de-100"><input type="checkbox" name="Faixa-mais-de-100" id="Faixa-mais-de-100"> mais de R$100,00</label> <br> 
-                <form oninput="valor.value = minimo.value">
-                    <label for="ativar-minimo"><input type="checkbox" name="ativar-minimo" id="ativar-minimo"> Minimo: </label> <br>
-                    <label for="minimo"><input type="range" name="minimo" id="minimo" min="0" max="100" value="50"> 
-                        R$<output name="valor" for="minimo">50</output>,00
-                    </label> <br>
-                </form>
-                <form oninput="valor.value = maximo.value">
-                    <label for="ativar-maximo"><input type="checkbox" name="ativar-maximo" id="ativar-maximo"> Maximo: </label> <br>
-                    <label for="maximo"><input type="range" name="maximo" id="maximo" min="100" max="200" value="150"> 
-                        R$<output name="valor" for="maximo">150</output>,00
-                    </label> <br>
-                </form>
-                <input type="submit" id="aplicar-filtros" value="Aplicar Filtros">
+                    <label for="pesquisar"><img src="imagens/icones/lupa.png" alt="lupa pesquisar" id="lupa"><input type="search" name="pesquisar" id="pesquisar"></label> <br>                   
+                    <h2>Filtros</h2>
+                    <label for="filtro-mercearia"><input type="checkbox" name="mercearia" id="filtro-mercearia"> Mercearia</label> <br> 
+                    <label for="filtro-acougue"><input type="checkbox" name="acougue" id="filtro-acougue"> Açougue</label> <br> 
+                    <label for="filtro-laticinios-e-frios"><input type="checkbox" name="laticinios-e-frios" id="filtro-laticinios-e-frios"> Laticínios e Frios</label> <br> 
+                    <label for="filtro-hortifruti"><input type="checkbox" name="hortifruti" id="filtro-hortifruti"> Hortifruti</label> <br> 
+                    <label for="filtro-limpeza-e-higiene"><input type="checkbox" name="Limpeza-e-higiene" id="filtro-limpeza-e-higiene"> Limpeza e Higiene</label> <br> 
+                    <label for="filtro-Faixa-ate-10"><input type="checkbox" name="Faixa-ate-10" id="filtro-Faixa-ate-10"> até R$10,00</label> <br> 
+                    <label for="filtro-Faixa-de-10-a-25"><input type="checkbox" name="Faixa-de-10-a-25" id="filtro-Faixa-de-10-a-25"> de R$10,00 a R$25,00</label> <br> 
+                    <label for="filtro-Faixa-de-25-a-50"><input type="checkbox" name="Faixa-de-25-a-50" id="filtro-Faixa-de-25-a-50"> de R$25,00 a R$50,00</label> <br> 
+                    <label for="filtro-Faixa-de-50-a-100"><input type="checkbox" name="Faixa-de-50-a-100" id="filtro-Faixa-de-50-a-100"> de R$50,00 a R$100,00</label> <br> 
+                    <label for="filtro-Faixa-mais-de-100"><input type="checkbox" name="Faixa-mais-de-100" id="filtro-Faixa-mais-de-100"> mais de R$100,00</label> <br> 
+                    <label for="ativar-minimo"><input type="checkbox" name="ativar-minimo" id="ativar-minimo"> Minimo: </label>
+                    <label for="minimo"><input type="range" name="minimo" id="minimo" min="0" max="100" value="50"> R$50,00</label> <br>
+                    <label for="ativar-maximo"><input type="checkbox" name="ativar-maximo" id="ativar-maximo"> Maximo: </label>
+                    <label for="maximo"><input type="range" name="maximo" id="maximo" min="100" max="200" value="150"> R$150,00</label> <br>
+                    <input type="submit" id="aplicar-filtros" value="Aplicar Filtros">
+                </form>  
             </section>
             <section id="produtos">
                         <div class="produto">             
@@ -213,7 +206,7 @@
                         <li>Domingos e Feriados: das 08h às 18h</li>
                     </ul>
                 </section>
-                <form action="">
+                <form>
                     <label for="nome">Nome: <input type="text" name="nome" id="nome" maxlength="15"></label> <br>
                     <label for="email">E-mail: <input type="email" name="Email" id="email"></label> <br>
                     <label for="mensagem">Mensagem: </label> <br>

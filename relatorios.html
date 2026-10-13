@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Relatórios</title>
         <style>
             @import url(css/Stylesheet.css);
-            @import url(css/Impressão.css);
+            @import url(css/Impressao.css);
         </style>
     </head>
     <body>
-        <header>
-            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
-            <h1>Super Show Supermercados</h1>
+        <header class="nao-imprimir">
+            <a href="index.html"><img src="imagens/variados/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
+            <h1>Área Administrativa</h1>
             <nav class="links">
                 <a href="cadastro.html" >Cadastrar</a>
                 <a href="login.html" >Entrar</a>
                 <a href="perfil.html" ><img src="imagens/icones/perfil-de-usuario.png" alt="perfil"></a>
-                <a href="loja.html" ><img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></a>
+                <a href="loja.html" ><img src="imagens/icones/carrinhoDeCompras.png" alt="carrinho de compras"></a>
                 <a href="relatorios.html" aria-current="page"><img src="imagens/icones/tabela.png" alt="tabela relatorios"></a>
             </nav>
         </header>
         <main class="relatorios">
-            <img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="Logo" id="imprimir-logo">
+            <img src="imagens/variados/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo" id="imprimir-logo">
             <section class="tabela">
                 <div>
                     <h2 class="nao-imprimir">Relatório de Clientes</h2>
                     <form class="nao-imprimir">
                         <label for="pesquisar-clientes">Pesquisar Cliente: <br></label><input type="search" name="pesquisar-clientes" id="pesquisar-clientes">
-                        <label for="dado-pesquisado"> 
-                        <select name="dado-pesquisado" id="dado-pesquisado">
+                        <label for="dado-cliente-pesquisado"> 
+                        <select name="dado-cliente-pesquisado" id="dado-cliente-pesquisado">
                             <option value="nome" selected>Nome</option>
                             <option value="id">ID</option>
                             <option value="email">E-mail</option>
@@ -95,8 +96,8 @@
                     <h2 class="nao-imprimir">Relatório de Compras</h2>
                     <form class="nao-imprimir">
                         <label for="pesquisar-compras">Pesquisar Compras: <br></label><input type="search" name="pesquisar-compras" id="pesquisar-compras">
-                        <label for="dado-pesquisado"> 
-                        <select name="dado-pesquisado" id="dado-pesquisado">
+                        <label for="dado-compras-pesquisada"> 
+                        <select name="dado-compras-pesquisada" id="dado-compras-pesquisada">
                             <option value="id" selected>ID</option>
                             <option value="cliente">Cliente</option>
                             <option value="data">Data</option>
@@ -170,15 +171,14 @@
                 </div>
             </section>
             <footer>
-                <section>
-                    
+                <div>
                     <p>
                         Emissão: 12/10/2026 - 20:56:12 (BRT)
                     </p>
                     <p>
                         Versão do Sistema: v3.4.1
                     </p>
-                </section>
+                </div>
             </footer>
         </main>
     </body>

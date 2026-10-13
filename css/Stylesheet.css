@@ -222,7 +222,6 @@ html {
         display: grid;
     }
     #loja #produtos{
-        grid-template-rows: repeat(auto-fill, max-content);
         grid-row-gap: 15px;
         grid-column-gap: 10px;
     }
@@ -243,7 +242,7 @@ html {
 
 
 #descricao {
-    background-image: url(/imagens/supermercado.png);
+    background-image: url(/imagens/variados/supermercado.png);
     background-size:cover;
     height: fit-content;
     width: fit-content;
@@ -356,19 +355,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .links a:active {
     padding-top: 13px;
     padding-bottom: 13px;
+    background-color: rgba(255, 255, 254, 0.387);
+    transform: translateY(-7px);
 }
 .links {
     position: absolute;
     right: 10px;
-    top: 2em;
+    top: 0.5em;
+
 }
 .links a {
+    display: inline-block; 
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid black
+    border: 2px solid black;
+    transition: transform 0.3s ease;
 }
 .links a:hover {
     background-color: rgba(255, 255, 254, 0.387);
+    transform: translateY(-7px);
 }
 .links a img {
     position: relative;
