@@ -3,8 +3,183 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Relatórios</title>
+        <style>
+            @import url(css/Stylesheet.css);
+            @import url(css/Impressão.css);
+        </style>
     </head>
     <body>
-        
+        <header>
+            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
+            <h1>Super Show Supermercados</h1>
+            <nav class="links">
+                <a href="cadastro.html" >Cadastrar</a>
+                <a href="login.html" >Entrar</a>
+                <a href="perfil.html" ><img src="imagens/icones/perfil-de-usuario.png" alt="perfil"></a>
+                <a href="loja.html" ><img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></a>
+                <a href="relatorios.html" aria-current="page"><img src="imagens/icones/tabela.png" alt="tabela relatorios"></a>
+            </nav>
+        </header>
+        <main class="relatorios">
+            <img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="Logo" id="imprimir-logo">
+            <section class="tabela">
+                <div>
+                    <h2 class="nao-imprimir">Relatório de Clientes</h2>
+                    <form class="nao-imprimir">
+                        <label for="pesquisar-clientes">Pesquisar Cliente: <br></label><input type="search" name="pesquisar-clientes" id="pesquisar-clientes">
+                        <label for="dado-pesquisado"> 
+                        <select name="dado-pesquisado" id="dado-pesquisado">
+                            <option value="nome" selected>Nome</option>
+                            <option value="id">ID</option>
+                            <option value="email">E-mail</option>
+                            <option value="cpf">CPF</option>
+                        </select>
+                        </label>
+                    </form>
+                    <table>
+                        <caption>Tabela de Clientes</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">e-mail</th>
+                                <th scope="col">CPF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0001</td>
+                                <td>Carlos Eduardo da Silva</td>
+                                <td>carlose.silva@exemplo.com</td>
+                                <td>453.219.876-05</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>0002</td>
+                                <td>Mariana Costa Souza</td>
+                                <td>mariana.costas@exemplo.com</td>
+                                <td>109.843.521-99</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>0003</td>
+                                <td>Ricardo Alves Pereira</td>
+                                <td>ricardo.alves@exemplo.com</td>
+                                <td>287.654.321-47</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>0004</td>
+                                <td>Beatriz Rocha Lima</td>
+                                <td>beatriz.rlima@exemplo.com</td>
+                                <td>354.128.967-81</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>0005</td>
+                                <td>Lucas Gabriel Martins</td>
+                                <td>lucas.gmartins@exemplo.com</td>
+                                <td>021.987.643-52</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="tabela">
+                <div>
+                    <h2 class="nao-imprimir">Relatório de Compras</h2>
+                    <form class="nao-imprimir">
+                        <label for="pesquisar-compras">Pesquisar Compras: <br></label><input type="search" name="pesquisar-compras" id="pesquisar-compras">
+                        <label for="dado-pesquisado"> 
+                        <select name="dado-pesquisado" id="dado-pesquisado">
+                            <option value="id" selected>ID</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="data">Data</option>
+                            <option value="produto">Produto</option>
+                        </select>
+                        </label>
+                    </form>
+                    <table id="tabela-pedidos">
+                        <caption>Tabela de pedidos</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID da compra</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Produtos</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Valor Total</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CP001</td>
+                                <td>Carlos Eduardo da Silva</td>
+                                <td>Arroz Tio João 5 kg, Feijão Carioca 1 kg</td>
+                                <td>1, 3</td>
+                                <td>62,76</td>
+                                <td>18/08/2026</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CP002</td>
+                                <td>Mariana Costa Souza</td>
+                                <td>Alcatra,Batata Inglesa,Tomate</td>
+                                <td>2, 1.5, 1</td>
+                                <td>97,24</td>
+                                <td>04/09/2026</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CP003</td>
+                                <td>Ricardo Alves Pereira</td>
+                                <td>Leite Integral Longa Vida 1L, Ovos Brancos 12 unidades, Manteiga com Sal 200g</td>
+                                <td>12, 2, 1</td>
+                                <td>116,98</td>
+                                <td>23/09/2026</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CP004</td>
+                                <td>Beatriz Rocha Lima</td>
+                                <td>Detergente Líquido Neutro 500ml, Sabão em Pó 800g</td>
+                                <td>4, 2</td>
+                                <td>40,4</td>
+                                <td>01/10/2026</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>CP005</td>
+                                <td>Lucas Gabriel Martins</td>
+                                <td>Arroz Tio João 5 kg, Patinho, Tomate</td>
+                                <td>2, 1.2, 2</td>
+                                <td>105,38</td>
+                                <td>09/10/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <footer>
+                <section>
+                    
+                    <p>
+                        Emissão: 12/10/2026 - 20:56:12 (BRT)
+                    </p>
+                    <p>
+                        Versão do Sistema: v3.4.1
+                    </p>
+                </section>
+            </footer>
+        </main>
     </body>
 </html>

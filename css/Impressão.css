@@ -1,0 +1,11 @@
+#imprimir-logo {
+    display: none;
+}
+@media print {
+    .nao-imprimir {
+        display: none;
+    }
+    #imprimir-logo {
+        display: block;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Loja</title>
+        <style>
+            @import url(css/Stylesheet.css);
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
+            <h1>Super Show Supermercados</h1>
+            <nav class="links">
+                <a href="cadastro.html" >Cadastrar</a>
+                <a href="login.html" >Entrar</a>
+                <a href="perfil.html" ><img src="imagens/icones/perfil-de-usuario.png" alt="perfil"></a>
+                <a href="loja.html" aria-current="page"><img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></a>
+                <a href="relatorios.html" ><img src="imagens/icones/tabela.png" alt="tabela relatorios"></a>
+            </nav>
+        </header>
+        <main id="loja">
+            
+            <section id="mensagem-compra">
+                <h2>Compra Finalizada!</h2>
+                <p>Numero do pedido: CP001</p>
+                <hr>
+                <p>1x Arroz Tio João 5 kg : R$ 21,39</p>
+                <p>2x Feijão Carioca 1 kg : R$ 27,58</p>
+                <p>3x Batata Inglesa 1 kg : R$10,47</p>
+                <h3>Total: R$59,44</h3>
+                <hr>
+                <button id="ok">ok</button>
+            </section>
+            <section id="carrinho">
+                <h2>Carrinho <img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></h2>
+                <h3 id="total">Total: R$59,44 </h3>                
+                <button id="confirmar-compra">Finalizar Compra</button>
+                <div id="produtos-carrinho">
+                    <div class="produto">             
+                        <img src="imagens/Produtos/Arroz.png" alt="arroz" class="imagens-produtos">
+                        <h3>Arroz Tio João 5 kg</h3>
+                        <h4>R$ 21,39</h4>
+                        <label for="quantidade-arroz"><input type="number" name="quantidade-arroz" id="quantidade-arroz" min="1" max="15" value="1" > Subtotal: R$ 21.39</label>
+                        <button id="remover-arroz">remover do carrinho</button>
+                    </div>
+                    <div class="produto">
+                        <img src="imagens/Produtos/feijao.png" alt="feijao" class="imagens-produtos">
+                        <h3>Feijão Carioca 1 kg</h3>
+                        <h4>R$ 13,79</h4>
+                        <label for="quantidade-feijao"><input type="number" name="quantidade-feijao" id="quantidade-feijao" min="1" max="15" value="2" > Subtotal: R$ 27.58</label>
+                        <button id="remover-feijao">remover do carrinho</button>
+                        
+                    </div>
+                    <div class="produto">
+                        <img src="imagens/Produtos/batata.png" alt="batata" class="imagens-produtos">
+                        <h3>Batata Inglesa</h3>
+                        <h4>R$ 3,49/kg</h4>
+                        <label for="quantidade-batata"><input type="number" name="quantidade-batata" id="quantidade-batata" min="1" max="15" value="3" > Subtotal: R$ 10.47</label>
+                        <button id="remover-batata">remover do carrinho</button>
+                        
+                    </div>
+                </div>
+                <br>
+                <hr>
+            </section>
+            <section id="filtros">
+                <form>
+                    <label for="pesquisar"><img src="imagens/icones/lupa.png" alt="lupa pesquisar" id="lupa"><input type="search" name="pesquisar" id="pesquisar"></label> <br>
+                </form>                     
+                <h2>Filtros</h2>
+                <label for="mercearia"><input type="checkbox" name="mercearia" id="mercearia"> Mercearia</label> <br> 
+                <label for="acougue"><input type="checkbox" name="acougue" id="acougue"> Açougue</label> <br> 
+                <label for="laticinios-e-frios"><input type="checkbox" name="laticinios-e-frios" id="laticinios-e-frios"> Laticínios e Frios</label> <br> 
+                <label for="hortifruti"><input type="checkbox" name="hortifruti" id="hortifruti"> Hortifruti</label> <br> 
+                <label for="limpeza-e-higiene"><input type="checkbox" name="Limpeza-e-higiene" id="limpeza-e-higiene"> Limpeza e Higiene</label> <br> 
+                <label for="Faixa-ate-10"><input type="checkbox" name="Faixa-ate-10" id="Faixa-ate-10"> até R$10,00</label> <br> 
+                <label for="Faixa-de-10-a-25"><input type="checkbox" name="Faixa-de-10-a-25" id="Faixa-de-10-a-25"> de R$10,00 a R$25,00</label> <br> 
+                <label for="Faixa-de-25-a-50"><input type="checkbox" name="Faixa-de-25-a-50" id="Faixa-de-25-a-50"> de R$25,00 a R$50,00</label> <br> 
+                <label for="Faixa-de-50-a-100"><input type="checkbox" name="Faixa-de-50-a-100" id="Faixa-de-50-a-100"> de R$50,00 a R$100,00</label> <br> 
+                <label for="Faixa-mais-de-100"><input type="checkbox" name="Faixa-mais-de-100" id="Faixa-mais-de-100"> mais de R$100,00</label> <br> 
+                <form oninput="valor.value = minimo.value">
+                    <label for="ativar-minimo"><input type="checkbox" name="ativar-minimo" id="ativar-minimo"> Minimo: </label> <br>
+                    <label for="minimo"><input type="range" name="minimo" id="minimo" min="0" max="100" value="50"> 
+                        R$<output name="valor" for="minimo">50</output>,00
+                    </label> <br>
+                </form>
+                <form oninput="valor.value = maximo.value">
+                    <label for="ativar-maximo"><input type="checkbox" name="ativar-maximo" id="ativar-maximo"> Maximo: </label> <br>
+                    <label for="maximo"><input type="range" name="maximo" id="maximo" min="100" max="200" value="150"> 
+                        R$<output name="valor" for="maximo">150</output>,00
+                    </label> <br>
+                </form>
+                <input type="submit" id="aplicar-filtros" value="Aplicar Filtros">
+            </section>
+            <section id="produtos">
+                        <div class="produto">             
+                            <img src="imagens/Produtos/Arroz.png" alt="arroz" class="imagens-produtos">
+                            <h3>Arroz Tio João 5 kg</h3>
+                            <p>
+                                O arroz tradicional que fica sempre soltinho e saboroso, perfeito para o dia a dia da sua família.
+                            </p>
+                            <h4>R$ 21,39<button id="adicionar-arroz">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/feijao.png" alt="feijao" class="imagens-produtos">
+                            <h3>Feijão Carioca 1 kg</h3>
+                            <p>
+                                Grãos selecionados de cozimento rápido, ideais para um caldo grosso, rico e muito nutritivo.
+                            </p>
+                            <h4>R$ 13,79<button id="adicionar-feijao">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/ovos.png" alt="ovos" class="imagens-produtos">
+                            <h3>Ovos Brancos 12 unidades</h3>
+                            <p>
+                                Ovos selecionados e sempre frescos, ideais para o café da manhã ou para o preparo de receitas.
+                            </p>
+                            <h4>R$ 12,00<button id="adicionar-ovos">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/alcatra.png" alt="alcatra" class="imagens-produtos">
+                            <h3>Alcatra</h3>
+                            <p>
+                                Corte nobre, extremamente macio e com pouca gordura, perfeito para bifes rápidos e grelhados suculentos.
+                            </p>
+                            <h4>R$ 42,50/kg<button id="adicionar-alcatra">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/patinho.png" alt="patinho" class="imagens-produtos">
+                            <h3>patinho</h3>
+                            <p>
+                                Carne magra e versátil, excelente opção para carne moída, refogados saudáveis e almôndegas.
+                            </p>
+                            <h4>R$ 40,50/kg<button id="adicionar-patinho">Adicionar ao carrinho</button></h4>
+                            
+                        </div>               
+                        <div class="produto">
+                            <img src="imagens/Produtos/leite.png" alt="leite" class="imagens-produtos">
+                            <h3>Leite Integral Longa Vida 1L</h3>
+                            <p>
+                                Fonte de cálcio e energia com o sabor puro e a cremosidade que sua rotina pede.
+                            </p>
+                            <h4>R$ 6,79<button id="adicionar-leite">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/manteiga.png" alt="manteiga" class="imagens-produtos">
+                            <h3>Manteiga com Sal 200g</h3>
+                            <p>
+                                Textura cremosa e sabor irresistível, perfeita para o pão quentinho ou para dar um toque especial aos pratos.
+                            </p>
+                            <h4>R$ 11,50<button id="adicionar-manteiga">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/tomate.png" alt="tomate" class="imagens-produtos">
+                            <h3>Tomate</h3>
+                            <p>
+                                Tomates frescos e selecionados, ideais para saladas leves ou para preparar aquele molho caseiro encorpado.
+                            </p>
+                            <h4>R$ 7,00/kg<button id="adicionar-tomate">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/batata.png" alt="batata" class="imagens-produtos">
+                            <h3>Batata Inglesa</h3>
+                            <p>
+                                Batatas frescas e versáteis, prontas para virar purê, fritas crocantes ou acompanhar assados.
+                            </p>
+                            <h4>R$ 3,49/kg<button id="adicionar-batata">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/detergente.png" alt="detergente" class="imagens-produtos">
+                            <h3>Detergente Líquido Neutro 500ml</h3>
+                            <p>
+                                Máxima eficiência contra a gordura, garantindo louças brilhantes sem agredir as mãos.
+                            </p>
+                            <h4>R$ 2,60<button id="adicionar-detergente">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+                        <div class="produto">
+                            <img src="imagens/Produtos/sabaoEmPo.png" alt="sabao em pó" class="imagens-produtos">
+                            <h3>Sabão em Pó 800g</h3>
+                            <p>
+                                Remoção poderosa de manchas e sujeiras, deixando suas roupas limpas, cheirosas e com cores vivas.
+                            </p>
+                            <h4>R$ 14,90<button id="adicionar-sabao">Adicionar ao carrinho</button></h4>
+                            
+                        </div>
+            </section>
+            <footer>
+                <section>
+                    <h2>Contato</h2>
+                    <p>
+                        Endereço: Avenida das Nações, nº 1540 - Bairro Jardim Alvorada, Cidade Alta/SP - CEP: 01234-567
+                    </p>
+                    <p>
+                        Telefone: (11) 98765-4321
+                    </p>
+                    <p>
+                        E-mail: contato@supershowsupermercados.com.br
+                    </p>
+                    <p>Horário de Funcionamento:</p>                   
+                    <ul>
+                        
+                        <li>Segunda a Sábado: das 07h às 22h</li>
+                        <li>Domingos e Feriados: das 08h às 18h</li>
+                    </ul>
+                </section>
+                <form action="">
+                    <label for="nome">Nome: <input type="text" name="nome" id="nome" maxlength="15"></label> <br>
+                    <label for="email">E-mail: <input type="email" name="Email" id="email"></label> <br>
+                    <label for="mensagem">Mensagem: </label> <br>
+                    <textarea name="mensagem" id="mensagem" maxlength="129"></textarea> <br>
+                    <input type="submit" name="Enviar" id="enviar"><br>
+                </form>
+            </footer>  
+        </main>        
+    </body>
+</html>

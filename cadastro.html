@@ -4,16 +4,23 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Cadastro</title>
         <style>
-            @import url(Stylesheet.css);
+            @import url(css/Stylesheet.css);
         </style>
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="Logo"></a>
+            <a href="index.html"><img src="imagens/super-show-supermercado-seeklogo.png" alt="Logo Super Show Supermercados" class="logo"></a>
             <h1>Super Show Supermercados</h1>
+            <nav class="links">
+                <a href="cadastro.html" aria-current="page" >Cadastrar</a>
+                <a href="login.html" >Entrar</a>
+                <a href="perfil.html" ><img src="imagens/icones/perfil-de-usuario.png" alt="perfil"></a>
+                <a href="loja.html" ><img src="imagens/icones/carrinho de compras.png" alt="carrinho de compras"></a>
+                <a href="relatorios.html" ><img src="imagens/icones/tabela.png" alt="tabela relatorios"></a>
+            </nav>
         </header>
-        <main>
-            <section id="cadastro">
+        <main id="main-cadastro">
+            <section id="conta">
                 
                 <form action="index.html">
                     <a href="login.html" id="login-link">já sou cliente &#8594</a>
@@ -33,6 +40,33 @@
                     </div>
                 </form>
             </section>
+            <footer>
+                <section>
+                    <h2>Contato</h2>
+                    <p>
+                        Endereço: Avenida das Nações, nº 1540 - Bairro Jardim Alvorada, Cidade Alta/SP - CEP: 01234-567
+                    </p>
+                    <p>
+                        Telefone: (11) 98765-4321
+                    </p>
+                    <p>
+                        E-mail: contato@supershowsupermercados.com.br
+                    </p>
+                    <p>Horário de Funcionamento:</p>                   
+                    <ul>
+                        
+                        <li>Segunda a Sábado: das 07h às 22h</li>
+                        <li>Domingos e Feriados: das 08h às 18h</li>
+                    </ul>
+                </section>
+                <form action="">
+                    <label for="nome">Nome: <input type="text" name="nome" id="nome" maxlength="15"></label> <br>
+                    <label for="email">E-mail: <input type="email" name="Email" id="email"></label> <br>
+                    <label for="mensagem">Mensagem: </label> <br>
+                    <textarea name="mensagem" id="mensagem" maxlength="129"></textarea> <br>
+                    <input type="submit" name="Enviar" id="enviar"><br>
+                </form>
+            </footer>  
         </main>
     </body>
 </html>
