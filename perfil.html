@@ -29,14 +29,17 @@
                     <input type="number" name="ID" id="ID" readonly value="0001"><br>
                     <label for="nomeCadastro">Nome: </label> <br>
                     <input type="text" name="nome" id="nomeCadastro" value="Cliente" required><br>
+                    <label for="cpf">CPF: </label> <br>
+                    <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="CPF" value="123.456.789-10" required><br>
+                    <label for="telefone">Telefone: </label><br>
+                    <input type="number" name="telefone" id="telefone"> <br>
                     <label for="emailCadastro">E-mail: </label> <br>
                     <input type="email" name="email" id="emailCadastro" placeholder="email@exemplo.com"  value="Cliente@exemplo.com" required><br>
                     <label for="senha">Senha:</label> <br>
                     <input type="password" name="senha" id="senha" minlength="8" value="12345678" required><br>
                     <label for="senhaConfirmacao">Confirmação Senha: </label><br>
                     <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" minlength="8" value="12345678" required><br>
-                    <label for="cpf">CPF: </label> <br>
-                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="CPF" value="123.456.789-10" required><br>
+                    
                     <div id="cadastrar">
                         <input type="submit" name="AtualizarDados" value="Atualizar Dados" id="botaoCadastrar">
                     </div>
@@ -127,7 +130,7 @@
                     <label for="email">E-mail: <input type="email" name="Email" id="email"></label> <br>
                     <label for="mensagem">Mensagem: </label> <br>
                     <textarea name="mensagem" id="mensagem" maxlength="129"></textarea> <br>
-                    <input type="submit" name="Enviar" id="enviar"><br>
+                    <input type="submit" value="Enviar" name="Enviar" id="enviar"><br>
                 </form>
             </footer>  
         </main>
