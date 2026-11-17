@@ -7,6 +7,7 @@
         <style>
             @import url(css/Stylesheet.css);
         </style>
+        <script type="module" src="js/produtos.js"></script>
     </head>
     <body>
         <header>
@@ -66,14 +67,14 @@
                 <hr>
             </section>
             <section id="filtros">
-                <form>
+                <form id="formulario-filtros">
                     <label for="pesquisar"><img src="imagens/icones/lupa.png" alt="lupa pesquisar" id="lupa"><input type="search" name="pesquisar" id="pesquisar"></label> <br>                   
                     <h2>Filtros</h2>
-                    <label for="filtro-mercearia"><input type="checkbox" name="mercearia" id="filtro-mercearia"> Mercearia</label> <br> 
-                    <label for="filtro-acougue"><input type="checkbox" name="acougue" id="filtro-acougue"> Açougue</label> <br> 
-                    <label for="filtro-laticinios-e-frios"><input type="checkbox" name="laticinios-e-frios" id="filtro-laticinios-e-frios"> Laticínios e Frios</label> <br> 
-                    <label for="filtro-hortifruti"><input type="checkbox" name="hortifruti" id="filtro-hortifruti"> Hortifruti</label> <br> 
-                    <label for="filtro-limpeza-e-higiene"><input type="checkbox" name="Limpeza-e-higiene" id="filtro-limpeza-e-higiene"> Limpeza e Higiene</label> <br> 
+                    <label for="filtro-mercearia"><input type="checkbox" name="mercearia" id="filtro-mercearia" class="filtro-categoria"> Mercearia</label> <br> 
+                    <label for="filtro-acougue"><input type="checkbox" name="acougue" id="filtro-acougue" class="filtro-categoria"> Açougue</label> <br> 
+                    <label for="filtro-laticinios-e-frios"><input type="checkbox" name="laticinios-e-frios" id="filtro-laticinios-e-frios" class="filtro-categoria"> Laticínios e Frios</label> <br> 
+                    <label for="filtro-hortifruti"><input type="checkbox" name="hortifruti" id="filtro-hortifruti" class="filtro-categoria"> Hortifruti</label> <br> 
+                    <label for="filtro-limpeza-e-higiene"><input type="checkbox" name="Limpeza-e-higiene" id="filtro-limpeza-e-higiene" class="filtro-categoria"> Limpeza e Higiene</label> <br> 
                     <label for="filtro-Faixa-ate-10"><input type="checkbox" name="Faixa-ate-10" id="filtro-Faixa-ate-10"> até R$10,00</label> <br> 
                     <label for="filtro-Faixa-de-10-a-25"><input type="checkbox" name="Faixa-de-10-a-25" id="filtro-Faixa-de-10-a-25"> de R$10,00 a R$25,00</label> <br> 
                     <label for="filtro-Faixa-de-25-a-50"><input type="checkbox" name="Faixa-de-25-a-50" id="filtro-Faixa-de-25-a-50"> de R$25,00 a R$50,00</label> <br> 
@@ -87,105 +88,14 @@
                 </form>  
             </section>
             <section id="produtos">
-                        <div class="produto">             
-                            <img src="imagens/Produtos/Arroz.png" alt="arroz" class="imagens-produtos">
-                            <h3>Arroz Tio João 5 kg</h3>
-                            <p>
-                                O arroz tradicional que fica sempre soltinho e saboroso, perfeito para o dia a dia da sua família.
-                            </p>
-                            <h4>R$ 21,39<button id="adicionar-arroz">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/feijao.png" alt="feijao" class="imagens-produtos">
-                            <h3>Feijão Carioca 1 kg</h3>
-                            <p>
-                                Grãos selecionados de cozimento rápido, ideais para um caldo grosso, rico e muito nutritivo.
-                            </p>
-                            <h4>R$ 13,79<button id="adicionar-feijao">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/ovos.png" alt="ovos" class="imagens-produtos">
-                            <h3>Ovos Brancos 12 unidades</h3>
-                            <p>
-                                Ovos selecionados e sempre frescos, ideais para o café da manhã ou para o preparo de receitas.
-                            </p>
-                            <h4>R$ 12,00<button id="adicionar-ovos">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/alcatra.png" alt="alcatra" class="imagens-produtos">
-                            <h3>Alcatra</h3>
-                            <p>
-                                Corte nobre, extremamente macio e com pouca gordura, perfeito para bifes rápidos e grelhados suculentos.
-                            </p>
-                            <h4>R$ 42,50/kg<button id="adicionar-alcatra">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/patinho.png" alt="patinho" class="imagens-produtos">
-                            <h3>patinho</h3>
-                            <p>
-                                Carne magra e versátil, excelente opção para carne moída, refogados saudáveis e almôndegas.
-                            </p>
-                            <h4>R$ 40,50/kg<button id="adicionar-patinho">Adicionar ao carrinho</button></h4>
-                            
-                        </div>               
-                        <div class="produto">
-                            <img src="imagens/Produtos/leite.png" alt="leite" class="imagens-produtos">
-                            <h3>Leite Integral Longa Vida 1L</h3>
-                            <p>
-                                Fonte de cálcio e energia com o sabor puro e a cremosidade que sua rotina pede.
-                            </p>
-                            <h4>R$ 6,79<button id="adicionar-leite">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/manteiga.png" alt="manteiga" class="imagens-produtos">
-                            <h3>Manteiga com Sal 200g</h3>
-                            <p>
-                                Textura cremosa e sabor irresistível, perfeita para o pão quentinho ou para dar um toque especial aos pratos.
-                            </p>
-                            <h4>R$ 11,50<button id="adicionar-manteiga">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/tomate.png" alt="tomate" class="imagens-produtos">
-                            <h3>Tomate</h3>
-                            <p>
-                                Tomates frescos e selecionados, ideais para saladas leves ou para preparar aquele molho caseiro encorpado.
-                            </p>
-                            <h4>R$ 7,00/kg<button id="adicionar-tomate">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/batata.png" alt="batata" class="imagens-produtos">
-                            <h3>Batata Inglesa</h3>
-                            <p>
-                                Batatas frescas e versáteis, prontas para virar purê, fritas crocantes ou acompanhar assados.
-                            </p>
-                            <h4>R$ 3,49/kg<button id="adicionar-batata">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/detergente.png" alt="detergente" class="imagens-produtos">
-                            <h3>Detergente Líquido Neutro 500ml</h3>
-                            <p>
-                                Máxima eficiência contra a gordura, garantindo louças brilhantes sem agredir as mãos.
-                            </p>
-                            <h4>R$ 2,60<button id="adicionar-detergente">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
-                        <div class="produto">
-                            <img src="imagens/Produtos/sabaoEmPo.png" alt="sabao em pó" class="imagens-produtos">
-                            <h3>Sabão em Pó 800g</h3>
-                            <p>
-                                Remoção poderosa de manchas e sujeiras, deixando suas roupas limpas, cheirosas e com cores vivas.
-                            </p>
-                            <h4>R$ 14,90<button id="adicionar-sabao">Adicionar ao carrinho</button></h4>
-                            
-                        </div>
+                        <template id="tmplt">
+                            <div class="produto">
+                                    <img class="imagens-produtos">
+                                    <h3></h3>
+                                    <p></p>
+                                    <h4><button>Adicionar ao carrinho</button></h4>        
+                            </div>
+                        </template>
             </section>
             <footer>
                 <section>
