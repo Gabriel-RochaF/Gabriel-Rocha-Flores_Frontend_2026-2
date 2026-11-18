@@ -44,8 +44,10 @@ window.onload = function(){
         const produtosLaticiniosEFrios = document.querySelectorAll(".produto-laticinios-e-frios")
         const produtosHortifruti = document.querySelectorAll(".produto-hortifruti")
         const produtoslimpezaEHigiene = document.querySelectorAll(".produto-limpeza-e-higiene")
+
+        const dados = new FormData(event.target);
         if (filtroCategoriaSelecionado){
-            const dados = new FormData(event.target);
+            
 
             if (!dados.has('mercearia')){                
                 produtosMercearia.forEach(element => {
@@ -113,7 +115,22 @@ window.onload = function(){
                 element.style.display = "";
             });
         }
+        
+        const loja = document.querySelector('#produtos');
+        const todosOsProdutos = loja.querySelectorAll(".produto");
+        const pesquisa = dados.get('pesquisar');
+        if (pesquisa){
+            todosOsProdutos.forEach(element => {
+                let h3 = element.querySelectorAll("h3");
+                var nome = h3[0].innerText.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+                if (!nome.includes((pesquisa.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")))) {
+                    element.style.display = "none"
+                }
+            });
+        }   
     })
+
+    
 }
 
 
