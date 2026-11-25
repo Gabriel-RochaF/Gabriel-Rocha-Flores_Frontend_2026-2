@@ -3,6 +3,7 @@ import { produtos } from "../data/produtos.js";
 window.onload = function(){
     var template = document.querySelector('#tmplt');
     const filtros = document.querySelector('#formulario-filtros')
+    
 
     produtos.forEach(element => {
         var produto = element;
@@ -33,6 +34,47 @@ window.onload = function(){
         }
         
     });
+
+    const filtroPrecos = document.querySelectorAll(".filtro-preco");
+    const seletorValor = document.querySelectorAll(".seletor-valor");
+    filtroPrecos.forEach(caixa => {
+            caixa.addEventListener('change', (event) => {
+                if (event.target.checked){
+                    filtroPrecos.forEach(c =>{
+                        if (c !== caixa) {
+                            c.checked = false;
+                        }
+                    })
+                    seletorValor.forEach(s => {
+                        s.checked = false;
+                    })
+                }
+            })
+        })    
+    seletorValor.forEach(caixa => {
+        caixa.addEventListener('change', (event) => {
+            if (event.target.checked){
+                filtroPrecos.forEach(c => {
+                    c.checked = false;
+                })
+            }
+        })
+    })
+    const sliderMinimo = document.querySelector("#minimo");
+    const minimoExibido = document.querySelector("#valor-minimo-exibido");
+
+    sliderMinimo.addEventListener('input', (event) =>{
+        let valor = Number(event.target.value)
+        minimoExibido.textContent = valor.toFixed(2);
+    })
+
+    const sliderMaximo = document.querySelector("#maximo");
+    const maximoExibido = document.querySelector("#valor-maximo-exibido");
+
+    sliderMaximo.addEventListener('input', (event) =>{
+        let valor = Number(event.target.value)
+        maximoExibido.textContent = valor.toFixed(2);
+    })
 
     filtros.addEventListener('submit', function(event){
         event.preventDefault();
@@ -128,9 +170,82 @@ window.onload = function(){
                 }
             });
         }   
+
+        const filtroPrecosSelecionado = this.querySelectorAll('.filtro-preco:checked').length
+
+        if (filtroPrecosSelecionado){
+            let valorMinimo;
+            let valorMaximo;
+            if (dados.has('Faixa-ate-10')){
+                valorMaximo = 10.0
+            } else if (dados.has('Faixa-de-10-a-25')){
+                valorMinimo = 10.0
+                valorMaximo = 25.0
+            } else if (dados.has('Faixa-de-25-a-50')){
+                valorMinimo = 25.0
+                valorMaximo = 50.0
+            } else if (dados.has('Faixa-de-50-a-100')){
+                valorMinimo = 50.0
+                valorMaximo = 100.0
+            } else if (dados.has('Faixa-mais-de-100')){
+                valorMinimo = 100.0
+            }
+
+            todosOsProdutos.forEach(element => {
+                let precoDoProduto;
+                let nomeProduto = element.querySelectorAll("h3");
+                produtos.forEach(p => {
+                    if (p.nome == nomeProduto[0].innerText){
+                        compararValor(p.preco,valorMinimo,valorMaximo,element)
+                    }
+                })
+            })
+        }
+        
+        const seletorPrecosSelecionado = this.querySelectorAll('.seletor-valor:checked').length
+        if (seletorPrecosSelecionado){
+            let valorMinimo;
+            let valorMaximo;
+
+            if (dados.has('ativar-minimo')){
+                valorMinimo = this.querySelector("#minimo").value
+            }
+            if (dados.has('ativar-maximo')){
+                valorMaximo = this.querySelector("#maximo").value
+            }
+
+            todosOsProdutos.forEach(element => {
+                let precoDoProduto;
+                let nomeProduto = element.querySelectorAll("h3");
+                produtos.forEach(p => {
+                    if (p.nome == nomeProduto[0].innerText){
+                        compararValor(p.preco,valorMinimo,valorMaximo,element)
+                    }
+                })
+            })
+        }
+        
+        
+
+
     })
 
     
 }
 
+function compararValor(preco, valorMinimo, valorMaximo, element){
+    if (valorMinimo !== undefined && valorMaximo !== undefined){
+        if(preco < valorMinimo || preco > valorMaximo){
+            element.style.display = "none"
+        }
+    } else if (valorMinimo !== undefined) {
+        if (preco < valorMinimo){
+            element.style.display = "none"
+        }
+    } else if (valorMaximo !== undefined){
+        if (preco > valorMaximo){
+            element.style.display = "none"
+        }
+    }
+}
 

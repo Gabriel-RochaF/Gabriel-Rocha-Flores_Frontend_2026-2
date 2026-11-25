@@ -80,10 +80,10 @@
                     <label for="filtro-Faixa-de-25-a-50"><input type="checkbox" name="Faixa-de-25-a-50" id="filtro-Faixa-de-25-a-50" class="filtro-preco"> de R$25,00 a R$50,00</label> <br> 
                     <label for="filtro-Faixa-de-50-a-100"><input type="checkbox" name="Faixa-de-50-a-100" id="filtro-Faixa-de-50-a-100" class="filtro-preco"> de R$50,00 a R$100,00</label> <br> 
                     <label for="filtro-Faixa-mais-de-100"><input type="checkbox" name="Faixa-mais-de-100" id="filtro-Faixa-mais-de-100" class="filtro-preco"> mais de R$100,00</label> <br> 
-                    <label for="ativar-minimo"><input type="checkbox" name="ativar-minimo" id="ativar-minimo"> Minimo: </label>
-                    <label for="minimo"><input type="range" name="minimo" id="minimo" min="0" max="100" value="50"> R$50,00</label> <br>
-                    <label for="ativar-maximo"><input type="checkbox" name="ativar-maximo" id="ativar-maximo"> Maximo: </label>
-                    <label for="maximo"><input type="range" name="maximo" id="maximo" min="100" max="200" value="150"> R$150,00</label> <br>
+                    <label for="ativar-minimo"><input type="checkbox" name="ativar-minimo" id="ativar-minimo" class="seletor-valor"> Minimo: </label>
+                    <label for="minimo"><input type="range" name="minimo" id="minimo" min="0" max="200" value="100"> R$<span id="valor-minimo-exibido">100.00</span></label> <br>
+                    <label for="ativar-maximo"><input type="checkbox" name="ativar-maximo" id="ativar-maximo" class="seletor-valor"> Maximo: </label>
+                    <label for="maximo"><input type="range" name="maximo" id="maximo" min="0" max="200" value="100"> R$<span id="valor-maximo-exibido">100.00</span></label> <br>
                     <input type="submit" id="aplicar-filtros" value="Aplicar Filtros">
                 </form>  
             </section>
