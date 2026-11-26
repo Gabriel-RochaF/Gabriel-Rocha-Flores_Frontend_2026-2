@@ -7,6 +7,7 @@
         <style>
             @import url(css/Stylesheet.css);
         </style>
+        <script type="module" src="js/clientes.js"></script>
     </head>
     <body>
         <header>
@@ -23,23 +24,27 @@
         <main id="main-cadastro">
             <section id="conta">
                 
-                <form action="index.html">
+                <form action="index.html" id="form-cadastro">
                     <a href="login.html" id="login-link">já sou cliente &#8594;</a>
                     <h2>Cadastre-se</h2>
-                    <label for="nomeCadastro">Nome: </label><br>
-                    <input type="text" name="nome" id="nomeCadastro" minlength="3" required><br>
+                    <label for="nome-cadastro">Nome: </label><br>
+                    <input type="text" name="nome" id="nome-cadastro" autocomplete="name" ><br>
                     <label for="cpf">CPF: </label><br>
-                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="CPF" required><br>
-                    <label for="emailCadastro">E-mail: </label><br>
-                    <input type="email" name="email" id="emailCadastro" placeholder="email@exemplo.com" required><br>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="CPF" ><br>
+                    <label for="email-cadastro">E-mail: </label><br>
+                    <input type="email" name="email" id="email-cadastro" placeholder="email@exemplo.com" autocomplete="email" ><br>
                     <label for="telefone">Telefone: </label><br>
-                    <input type="number" name="telefone" id="telefone"> <br>
-                    <label for="senha">Senha:</label><br>
-                    <input type="password" name="senha" id="senha" minlength="8" required><br>
-                    <label for="senhaConfirmacao">Confirmação Senha: </label><br>
-                    <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" minlength="8" required><br>
-                    <label for="cpf">CPF: </label><br>
-                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="CPF" required><br>
+                    <input type="text" name="telefone" id="telefone" ><br>
+                    <label for="senha" class="senha">Senha:<br>
+                        <input type="password" name="senha" id="senha"> <br>
+                        <button type="button" id="visibilidade-senha" class="botao-visibilidade"><img src="imagens/icones/olhoAberto.png" alt="Olho para visualização de senha"></button>
+                    </label>                   
+                    <p id="nivel-forca-senha">força</p>
+                    <label for="senha-confirmacao" class="senha">Confirmação Senha: <br>
+                        <input type="password" name="senhaConfirmacao" id="senha-confirmacao"><br>
+                        <button type="button" id="visibilidade-senha-confirmacao" class="botao-visibilidade"><img src="imagens/icones/olhoAberto.png" alt="Olho para visualização de senha"></button>
+                    </label><br>
+                    
                     <div id="cadastrar">
                         <input type="submit" name="Cadatrar" value="Cadatrar" id="botao-cadastrar">
                     </div>

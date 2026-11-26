@@ -520,3 +520,24 @@ td {
 #tabela-pedidos td {
     max-width: 8em;
 }
+
+#nivel-forca-senha {
+    visibility: hidden;
+    border-top: 3px solid black ;
+    margin: 0px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.senha {
+    position: relative;
+    display: inline-block;
+}
+.senha .botao-visibilidade {
+    position: absolute;
+    right: 0px;
+    top: 45%;
+    background: transparent;
+    border: none;
+    filter: brightness(0) invert(50%);
+}
